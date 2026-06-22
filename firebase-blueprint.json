@@ -1,0 +1,29 @@
+{
+  "firestore": {
+    "collections": {
+      "products": {
+        "fields": {
+          "name": { "type": "string" },
+          "category": { "type": "string" },
+          "price": { "type": "number" },
+          "createdAt": { "type": "timestamp" },
+          "updatedAt": { "type": "timestamp" }
+        },
+        "indexes": [
+          {
+            "fields": [
+              { "field": "category", "order": "ASCENDING" },
+              { "field": "createdAt", "order": "DESCENDING" }
+            ]
+          },
+          {
+            "fields": [
+              { "field": "category", "order": "ASCENDING" },
+              { "field": "price", "order": "ASCENDING" }
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

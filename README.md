@@ -32,20 +32,8 @@ We cursor by either `(createdAt, docId)` or `(price, docId)` depending on the ac
 npm install
 ```
 
-### 2. Configure Environment Variables
-Create a `.env` file in the root directory (you can copy `.env.example` as a template) and add your Firebase configurations:
-
-```env
-VITE_FIREBASE_API_KEY="your_api_key"
-VITE_FIREBASE_AUTH_DOMAIN="your_project_id.firebaseapp.com"
-VITE_FIREBASE_PROJECT_ID="your_project_id"
-VITE_FIREBASE_STORAGE_BUCKET="your_project_id.firebasestorage.app"
-VITE_FIREBASE_MESSAGING_SENDER_ID="your_messaging_sender_id"
-VITE_FIREBASE_APP_ID="your_app_id"
-VITE_FIREBASE_MEASUREMENT_ID="your_measurement_id"
-```
-
-The application is dynamically configured to secure these keys and read them safely both client-side (via Vite's bundler and fallback mechanisms) and server-side (via Node process environment parameters).
+### 2. Database Connection
+The application is pre-configured to connect to the custom Firestore project `products-52380` inside the `(default)` database instance.
 
 ### 3. Seed the Database
 To quickly seed the Firestore database with 2,000 product records, run:
